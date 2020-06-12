@@ -24,7 +24,7 @@ eia_set_key("key=API_KEY_HERE") #SEE LINK IN REPORT TO REQUEST API
 USid<- paste0("EBA.US48-ALL.D.", c("H")) 
 # U.S. Electric System Operating Data > Hourly Demand > U.S. > United States Lower 48 (US48)
 
-d1<- eia_series(USid[1], start = 2019)
+d1<- eia_series(USid[1], start = 2015)
 
 #Overall, Electric demand of US
 unnest(d1, cols = data) %>% ggplot(aes(date, value)) +
@@ -36,7 +36,7 @@ unnest(d1, cols = data) %>% ggplot(aes(date, value)) +
 NYid<- paste0("EBA.NY-ALL.D.", c("H")) 
 # U.S. Electric System Operating Data > Hourly Demand > U.S. > United States Lower 48 (US48)
 
-d2<- eia_series(NYid[1], start = 2019)
+d2<- eia_series(NYid[1], start = 2015)
 
 
 unnest(d2, cols = data) %>% ggplot(aes(date, value)) +
