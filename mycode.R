@@ -58,7 +58,7 @@ ggplot(D2020, aes(x=week,value)) + geom_line(color= "blue") + geom_line(data= D2
        subtitle = "2020 is Blue 2019 is Green") 
 
 
-####DWT Modeling
+####DTW Modeling
 alignment<- dtw(D2020$value,D2019$value, keep=T)
 
 alignment[["localCostMatrix"]]
